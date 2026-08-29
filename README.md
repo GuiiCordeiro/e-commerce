@@ -84,7 +84,7 @@ e-commerce-main/
 
 ##  Projeto
 
-Projeto desenvolvido em grupo para fins acadêmicos.
+Projeto desenvolvido em grupo para fins acadêmicos. <br>
 Integrantes:  
 OTAVIO FERREIRA DO PRADO <br>
 GUILHERME CORDEIRO DOS SANTOS <br>
