@@ -14,6 +14,6 @@ if ($id) {
     $stmt->bindValue(":id", $id);
 
     $stmt->execute();
-}s
+}
 header("Location: ../frontend/index.php");
 exit;
