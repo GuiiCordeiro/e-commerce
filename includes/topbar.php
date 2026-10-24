@@ -119,6 +119,7 @@
 
         <a href="#" id="btn-carrinho" aria-label="Carrinho">
             <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-carrinho">0</span>
         </a>
 
         <a href="favoritos.php" class="icone-favoritos" aria-label="Favoritos">

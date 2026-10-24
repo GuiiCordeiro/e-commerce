@@ -34,8 +34,8 @@ require_once __DIR__ . "/../includes/header.php";
         </div>
 
     </main>
-
-    <script src="script.js"></script>
+    <?php require_once __DIR__ . "/../includes/carrinho.php"; ?>
+    <script src="../assets/js/script.js"></script>
     <script src="../assets/js/dropdown.js"></script>
 </body>
 

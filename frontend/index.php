@@ -16,6 +16,8 @@ $stmt = $pdo->prepare("
 $stmt->execute();
 
 $produtos = $stmt->fetchAll();
+$produtosDestaque = array_slice($produtos, 0, 3);
+$produtosCatalogo = array_slice($produtos, 3);
 
 ?>
 
@@ -37,7 +39,7 @@ $produtos = $stmt->fetchAll();
 
         <section class="produtos produtos-home" id="listaProdutos">
 
-            <?php foreach ($produtos as $produto): ?>
+            <?php foreach ($produtosDestaque as $produto): ?>
 
                 <article
                     class="produto"
@@ -81,6 +83,64 @@ $produtos = $stmt->fetchAll();
             <?php endforeach; ?>
 
         </section>
+
+        <section class="secao-catalogo">
+
+    <div class="titulo-catalogo">
+        <span class="tag-catalogo">CATÁLOGO GAMER</span>
+
+        <h2>Mais produtos para seu setup</h2>
+
+        <p>
+            Continue descendo e encontre acessórios,
+            periféricos e itens.
+        </p>
+    </div>
+
+    <div class="produtos-catalogo">
+
+        <?php foreach ($produtosCatalogo as $produto): ?>
+
+            <article
+                class="produto"
+                data-nome="<?= htmlspecialchars($produto['produto']) ?>"
+                data-preco="R$ <?= number_format($produto['preco'], 2, ',', '.') ?>"
+                data-imagem="../uploads/<?= htmlspecialchars($produto['imagem'] ?: 'sem_imagem.png') ?>">
+
+                <button class="favorito" aria-label="Adicionar aos favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <div class="img-catalogo">
+                    <img
+                        src="../uploads/<?= htmlspecialchars($produto['imagem'] ?: 'sem_imagem.png') ?>"
+                        alt="<?= htmlspecialchars($produto['produto']) ?>">
+                </div>
+
+                <div class="info">
+
+                    <p class="nome-produto">
+                        <?= htmlspecialchars($produto['produto']) ?>
+                    </p>
+
+                    <p class="preco">
+                        R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
+                    </p>
+
+                    <button class="Adicionar">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </article>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</section>
 
         <?php if (empty($produtos)): ?>
 

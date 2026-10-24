@@ -444,3 +444,28 @@ footer{
     .titulo-catalogo p{font-size:16px;}
     .produtos-catalogo{grid-template-columns:1fr;}
 }
+
+#btn-carrinho {
+    position: relative;
+}
+
+.badge-carrinho {
+    position: absolute;
+    top: -11px;
+    right: -13px;
+
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ff003c;
+    color: white;
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: bold;
+}

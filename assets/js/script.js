@@ -17,6 +17,21 @@ function getFavoritos() {
 function salvarFavoritos(lista) {
     localStorage.setItem('favoritos', JSON.stringify(lista));
     atualizarBadgeFavoritos();
+
+}
+
+function atualizarBadgeCarrinho() {
+    const badge = document.querySelector('.badge-carrinho');
+    if (!badge) return;
+
+    const carrinho = getCarrinho();
+
+    const quantidade = carrinho.reduce(
+        (total, produto) => total + Number(produto.quantidade || 0),
+        0
+    );
+
+    badge.textContent = quantidade;
 }
 
 function getCarrinho() {
@@ -26,6 +41,7 @@ function getCarrinho() {
 function salvarCarrinho(lista) {
     localStorage.setItem('carrinho', JSON.stringify(lista));
     renderizarCarrinho();
+    atualizarBadgeCarrinho();
 }
 
 function atualizarBadgeFavoritos() {
@@ -242,3 +258,4 @@ function iniciarFavoritos() {
 atualizarBadgeFavoritos();
 iniciarHome();
 iniciarFavoritos();
+atualizarBadgeCarrinho();
