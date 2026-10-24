@@ -74,6 +74,5 @@ Para novos uploads pelo formulário, a pasta `uploads/` precisa permitir escrita
 
 Após a importação manual, confira os 9 produtos e suas imagens na página inicial. Teste a busca, os favoritos, o carrinho e os fluxos de cadastro e login usando apenas dados de teste.
 
-A análise de sintaxe dos 26 arquivos PHP encontrou um erro preexistente em `backend/excluir_produto.php`: há um caractere `s` após o fechamento do bloco `if` (`}s`), antes do redirecionamento. Isso impede a execução da exclusão de produtos. O problema pertence ao código existente e não é resolvido pela importação do banco; nenhum arquivo PHP foi alterado nesta entrega.
-
-O SQL passou pelo analisador sintático do phpMyAdmin sem erros e foi conferido estaticamente contra as consultas da aplicação. Foram confirmados os 9 produtos e os 9 arquivos de imagem correspondentes. A importação e os testes com conexão ao MySQL devem ser realizados pelo responsável pelo ambiente; nenhum banco local foi consultado ou alterado para preparar estes arquivos.
+## Tela inicial:
+<img width="1883" height="812" alt="image" src="https://github.com/user-attachments/assets/56174b3b-3156-40ab-b974-74877682fcf7" />
